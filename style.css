@@ -1,0 +1,11 @@
+body { 
+    font-family: 'Arial', sans-serif; color: #333; 
+}
+
+  section { 
+    padding: 15px; margin: 5px 0; 
+}
+
+  footer { 
+    background-color: #f2f2f2; padding: 10px; text-align: center; 
+}
