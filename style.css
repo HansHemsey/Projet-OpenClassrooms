@@ -1,21 +1,59 @@
+/* PALETTE HEX 
+--onyx: #343e3dff; Noir
+--chestnut: #8e443dff; Bordeau
+--cadet-gray: #96999cff; Gris
+--papaya-whip: #fff1d0ff; Crème
+--white: #ffffffff; Blanc
+*/
+
 body { 
-    font-family: 'Arial', sans-serif; color: #333; 
+  font-family: "Fjalla One", sans-serif;
+  color: #343e3d; 
+  height: 1000vh;
 }
 
-  section { 
-    padding: 15px; margin: 5px 0; 
+h2:hover {
+  text-decoration: underline;
+  text-decoration-color: #8E443DFF;
 }
 
-  footer { 
-    background-color: #f2f2f2; padding: 10px; text-align: center; 
+.container {
+  width: 100%;
+  height: 1000px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("assets/bg-image2.jpg");
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#ffffff;
+}
+.container h1 {
+  background-color: black;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.container h1:hover {
+  background-color: #FFF1D0;
+  color: #343E3D;
 }
 
 .sticky { 
-  position: sticky; top: 0; background-color: #505454; padding: 10px; z-index: 100; 
+  position: sticky; 
+  top: 0; 
+  background-color: #343E3D; 
+  padding: 10px; 
+  margin: 0;
+  z-index: 100; 
 }
 
 nav ul {
-  list-style-type: none; margin: 0; padding: 0; overflow: hidden; 
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0; 
+  overflow: hidden; 
 }
 
 nav ul li { 
@@ -23,10 +61,30 @@ nav ul li {
 }
 
 nav ul li a { 
-  display: block; color: #ffffff; text-align: center; padding: 14px 16px; text-decoration: none; 
+  display: block; 
+  color: #ffffff; 
+  text-align: center; 
+  padding: 14px 16px; 
+  text-decoration: none; 
 }
 
 nav ul li a:hover { 
   background-color: #ddd; 
-  
+  color: #343E3D;
+}
+
+section { 
+  padding: 0px; 
+  margin: 5px 0; 
+}
+
+footer { 
+  background-color: #505454; 
+  padding: 10px; 
+  text-align: center; 
+}
+
+.signature {
+  color: white;
+  text-align: center;
 }
