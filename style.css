@@ -143,8 +143,10 @@ footer {
   height: 40px;
   margin: 0 auto; /* Centrer l'arrière-plan horizontalement */
   padding-top: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 65px;
 }
+
+/* Experiences et Éducations */
 
 .timeline {
   position: relative;
@@ -194,3 +196,10 @@ footer {
 .spacer1 {
   margin: 250px;
 }
+
+.spacer-timeline {
+  margin: 150px;
+}
+
+/* Compétences */
+
