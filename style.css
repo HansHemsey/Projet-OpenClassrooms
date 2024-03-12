@@ -14,7 +14,7 @@ body {
   padding: 0;
 }
  h1 {
-  font-size: 6em;
+  font-size: 5em;
  }
 
  a {
@@ -41,6 +41,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   color:#ffffff;
 }
 .container h1 {
@@ -51,6 +52,12 @@ body {
 .container h1:hover {
   background-color: #FFF1D0;
   color: #343E3D;
+}
+
+.info-defile {
+  padding-top: 50px;
+  margin-top: 350px;
+  font-size:3em;
 }
 
 .sticky { 
@@ -143,7 +150,7 @@ footer {
   height: 40px;
   margin: 0 auto; /* Centrer l'arrière-plan horizontalement */
   padding-top: 10px;
-  margin-bottom: 65px;
+  margin-bottom: ;
 }
 
 /* Experiences et Éducations */
@@ -177,6 +184,7 @@ footer {
   padding-right: 20px;
   box-sizing: border-box;
   font-weight: 600;
+  margin-top: 8px;
 }
 
 .info {
@@ -190,7 +198,7 @@ footer {
 }
 
 .spacer {
-  margin: 50px;
+  margin: 100px;
 }
 
 .spacer1 {
@@ -201,5 +209,77 @@ footer {
   margin: 150px;
 }
 
+h4 {
+  text-align: center;
+  font-weight: 600;
+}
 /* Compétences */
 
+  .container-skills {
+    display: flex; /* Utilisation de Flexbox */
+    align-items: center; /* Centrer verticalement les éléments */
+    justify-content:center;
+  }
+  
+  .container-skills:hover{
+    color:#ffcb21
+  }
+  
+  .etoiles {
+    flex: 0 0 auto; /* Les étoiles ne sont pas flexibles */
+    font-size: ; /* Taille des étoiles */
+    margin: 5px;
+  }
+  
+  .espace {
+    flex: 0 0 20px; /* Espace fixe entre les étoiles et le mot */
+  }
+  
+  .mot {
+    flex: 0.3; /* Le mot prendra tout l'espace restant */
+    font-size: ;
+    /* Ajoutez d'autres styles selon vos besoins */
+  }
+  
+  h3 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 15px;
+  }
+
+  /* Contact */ 
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+
+.contact-map, .contact-info {
+  width: 50%; /* Largeur de chaque bloc */
+}
+
+.contact-map {
+  /* Style pour le bloc de la carte Google Maps */
+  /* Ajoutez les styles appropriés pour votre carte ici */
+}
+
+.contact-info {
+  /* Style pour les blocs d'informations de contact et de formulaire */
+  background-color: ;
+  padding-top: 150px;
+}
+
+.contact-info h2, .contact-form h2 {
+  margin-top: 0;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.contact-info ul li {
+  margin-bottom: 10px;
+}
