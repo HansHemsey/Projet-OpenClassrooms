@@ -7,12 +7,26 @@
 */
 
 body { 
-  font-family: "Fjalla One", sans-serif;
+  font-family: "Work Sans", sans-serif;
   color: #343e3d; 
   height: 1000vh;
+  margin: 0;
+  padding: 0;
 }
+ h1 {
+  font-size: 6em;
+ }
 
-h2:hover {
+ a {
+   text-decoration: none; 
+   color: #8e443dff; 
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+   
+.titre-metier:hover {
   text-decoration: underline;
   text-decoration-color: #8E443DFF;
 }
@@ -89,14 +103,14 @@ footer {
 }
 
 .container-apropos {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 
 .image-apropos {
   flex: 0 0 auto; /* Empêche l'image de se rétrécir ou de s'étendre */
   margin-right: 20px; /* Marge à droite de l'image pour l'espace */
-  padding-left: 50px;
+  padding-left: 150px;
   padding-top: 50px;
 }
 
@@ -109,13 +123,74 @@ footer {
   color: #8E443DFF;
   text-decoration: underline;
   text-decoration-color: #8E443DFF;
+  font-weight: 600;
 }
 
-.titre-rubrique {
+.titre-apropos {
   background-color: #8E443DFF;
   color: #ffffff;
   padding-left: 15px; 
   padding-right: 15px; 
   display: inline-block; /* Permet d'ajuster la taille de la couleur de fond */
 
+}
+
+.titre-rubrique {
+  background-color: #8E443DFF;
+  color: #ffffff;
+  text-align: center;
+  width: 11%; /* Largeur spécifique de l'arrière-plan */
+  height: 40px;
+  margin: 0 auto; /* Centrer l'arrière-plan horizontalement */
+  padding-top: 10px;
+  margin-bottom: 50px;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #8E443DFF;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.entry {
+  display: flex;
+  justify-content:space-between;
+  margin-bottom: 20px;
+}
+
+.date {
+  width: 45%;
+  text-align: right;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-weight: 600;
+}
+
+.info {
+  width: 50%;
+  padding-left: 50px;
+  box-sizing: border-box;
+}
+
+.info h2, .info p {
+  margin: 0px;
+}
+
+.spacer {
+  margin: 50px;
+}
+
+.spacer1 {
+  margin: 250px;
 }
