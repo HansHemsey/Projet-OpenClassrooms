@@ -9,12 +9,15 @@
 body { 
   font-family: "Work Sans", sans-serif;
   color: #343e3d; 
-  height: 1000vh;
   margin: 0;
   padding: 0;
 }
  h1 {
   font-size: 5em;
+ }
+
+ h4{
+margin-bottom: 40px;
  }
 
  a {
@@ -74,6 +77,8 @@ nav ul {
   margin: 0; 
   padding: 0; 
   overflow: hidden; 
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li { 
@@ -81,7 +86,7 @@ nav ul li {
 }
 
 nav ul li a { 
-  display: block; 
+  display: flex; 
   color: #ffffff; 
   text-align: center; 
   padding: 14px 16px; 
@@ -100,8 +105,13 @@ section {
 
 footer { 
   background-color: #505454; 
-  padding: 10px; 
+  padding: 5px; 
   text-align: center; 
+}
+
+.social-icons {
+width: 30px;
+height: 30px;
 }
 
 .signature {
@@ -115,10 +125,11 @@ footer {
 }
 
 .image-apropos {
-  flex: 0 0 auto; /* Empêche l'image de se rétrécir ou de s'étendre */
   margin-right: 20px; /* Marge à droite de l'image pour l'espace */
   padding-left: 150px;
   padding-top: 50px;
+  max-width: 100%; /* Pour assurer la réactivité de l'image */
+  height: auto; /* Pour assurer la réactivité de l'image */
 }
 
 .texte-apropos {
@@ -142,7 +153,21 @@ footer {
 
 }
 
-.titre-rubrique {
+@media (max-width: 1400px) {
+  .container-apropos {
+    flex-direction: column; /* Alignement vertical des éléments */
+    align-items: center; /* Centrage horizontal des éléments */
+    text-align: center; /* Centrage du texte */
+  }
+
+  .image-apropos, .texte-apropos {
+    width: 100%; /* Les éléments prennent toute la largeur disponible */
+    padding: 0 20px; /* Ajout de marges latérales */
+    margin-bottom: 20px; /* Espace entre l'image et le texte */
+  }
+}
+
+.titre-rubrique1 {
   background-color: #8E443DFF;
   color: #ffffff;
   text-align: center;
@@ -150,8 +175,25 @@ footer {
   height: 40px;
   margin: 0 auto; /* Centrer l'arrière-plan horizontalement */
   padding-top: 10px;
-  margin-bottom: ;
+  margin-bottom: 70px
 }
+.container-rubrique-experiences,
+.container-rubrique-etudes,
+.container-rubrique-competences,
+.container-rubrique-contact {
+  text-align: center;
+}
+
+.titre-rubrique {
+  background-color: #8E443DFF;
+  color: #ffffff;
+  text-align: center;
+  display: inline-block; /* Permet de centrer le contenu */
+  padding: 10px; /* Ajoutez des marges intérieures pour l'espace autour du texte */
+  box-sizing: border-box; /* Inclure les marges et les bordures dans la largeur fixe */
+  margin-bottom: 20px; /* Espacement en bas du titre */
+}
+
 
 /* Experiences et Éducations */
 
@@ -191,6 +233,7 @@ footer {
   width: 50%;
   padding-left: 50px;
   box-sizing: border-box;
+  text-align: left;
 }
 
 .info h2, .info p {
@@ -202,7 +245,7 @@ footer {
 }
 
 .spacer1 {
-  margin: 250px;
+  margin: 200px;
 }
 
 .spacer-timeline {
@@ -219,6 +262,7 @@ h4 {
     display: flex; /* Utilisation de Flexbox */
     align-items: center; /* Centrer verticalement les éléments */
     justify-content:center;
+    text-align: left;
   }
   
   .container-skills:hover{
@@ -227,7 +271,6 @@ h4 {
   
   .etoiles {
     flex: 0 0 auto; /* Les étoiles ne sont pas flexibles */
-    font-size: ; /* Taille des étoiles */
     margin: 5px;
   }
   
@@ -237,7 +280,6 @@ h4 {
   
   .mot {
     flex: 0.3; /* Le mot prendra tout l'espace restant */
-    font-size: ;
     /* Ajoutez d'autres styles selon vos besoins */
   }
   
@@ -252,34 +294,35 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding-top: 50px;
 }
 
 .contact-map, .contact-info {
   width: 50%; /* Largeur de chaque bloc */
+  padding: 10px;
 }
 
 .contact-map {
-  /* Style pour le bloc de la carte Google Maps */
-  /* Ajoutez les styles appropriés pour votre carte ici */
+  border-right: 3px solid #8E443DFF;
 }
 
 .contact-info {
   /* Style pour les blocs d'informations de contact et de formulaire */
-  background-color: ;
-  padding-top: 150px;
-}
-
-.contact-info h2, .contact-form h2 {
-  margin-top: 0;
+  padding-top: 120px;
+  border: 0;
 }
 
 .contact-info ul {
   list-style-type: none;
-  padding: 0;
-  text-align: center;
+  padding-left: 50px;
+  text-align: left;
 }
 
 .contact-info ul li {
-  margin-bottom: 10px;
+margin: 10px;
 }
+
+.tel-click,
+.mail-click {
+  color: #343E3D;
+}
+
