@@ -6,15 +6,23 @@
 --white: #ffffffff; Blanc
 */
 
+/* Corps et titres */
+
 body { 
   font-family: "Work Sans", sans-serif;
-  color: #343e3d; 
+  color: #343e3dff; 
   margin: 0;
   padding: 0;
 }
  h1 {
   font-size: 5em;
  }
+
+ h3 {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 15px;
+}
 
  h4{
 margin-bottom: 40px;
@@ -33,6 +41,9 @@ margin-bottom: 40px;
   text-decoration: underline;
   text-decoration-color: #8E443DFF;
 }
+
+
+/* Accueil */
 
 .container {
   width: 100%;
@@ -63,14 +74,233 @@ margin-bottom: 40px;
   font-size:3em;
 }
 
-.sticky { 
-  position: sticky; 
-  top: 0; 
-  background-color: #343E3D; 
-  padding: 10px; 
-  margin: 0;
-  z-index: 100; 
+
+/* A Propos */
+
+.container-apropos {
+  display: inline-flex; /* Conteneur flexible en ligne */
+  align-items: center;
 }
+
+.image-apropos {
+  margin-right: 20px; 
+  padding-left: 150px;
+  padding-top: 50px;
+  max-width: 100%; 
+  height: auto; /* Pour assurer la réactivité de l'image */
+}
+
+.texte-apropos {
+  flex: 0.7; /* Permet au texte descriptif de s'étendre autant que possible */
+  line-height: 2;
+}
+
+.bordeau-text {
+  color: #8E443DFF;
+  text-decoration: underline;
+  text-decoration-color: #8E443DFF;
+  font-weight: 600;
+}
+
+.titre-apropos {
+  background-color: #8E443DFF;
+  color: #ffffff;
+  padding-left: 15px; 
+  padding-right: 15px; 
+  display: inline-block; /* Permet d'ajuster la taille de la couleur de fond */
+
+}
+
+@media (max-width: 1400px) { /* Permet de passer le texte en dessous de l'image(responsive)*/
+  .container-apropos {
+    flex-direction: column; /* Alignement vertical des éléments */
+    align-items: center; 
+    text-align: center; 
+  }
+
+  .image-apropos, .texte-apropos {
+    width: 100%; 
+    padding: 0 20px; 
+    margin-bottom: 20px; 
+  }
+}
+
+.titre-rubrique1 {
+  background-color: #8E443DFF;
+  color: #ffffff;
+  text-align: center;
+  width: 11%; /* Largeur spécifique de l'arrière-plan */
+  height: 40px;
+  margin: 0 auto; /* Centrer l'arrière-plan horizontalement */
+  padding-top: 10px;
+  margin-bottom: 70px
+}
+
+
+/* Experiences et Éducations */
+
+.container-rubrique-experiences,
+.container-rubrique-etudes,
+.container-rubrique-competences,
+.container-rubrique-contact {
+  text-align: center;
+}
+
+.titre-rubrique {
+  background-color: #8E443DFF;
+  color: #ffffff;
+  text-align: center;
+  display: inline-block; /* elements en ligne avec mise en forme de bloc*/
+  padding: 10px; 
+  box-sizing: border-box; /* Inclure les marges et les bordures dans la largeur fixe */
+  margin-bottom: 20px; 
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.timeline::after { /* Personnalisation du pseudo élément */
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: #8E443DFF;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Positionnement au centre de son parent */
+}
+
+.entry {
+  display: flex;
+  justify-content:space-between;
+  margin-bottom: 20px;
+}
+
+.date {
+  width: 45%;
+  text-align: right;
+  padding-right: 20px;
+  box-sizing: border-box; /*Largeur-Hauteur inclut le contenu, remplissage et bordure */
+  font-weight: 600;
+  margin-top: 8px;
+
+}
+.date2 {
+  width: 45%;
+  text-align: left;
+  padding-right: 20px;
+  box-sizing: border-box;
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+.info {
+  width: 50%;
+  padding-left: 50px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.info2 {
+  width: 50%;
+  padding-right: 50px;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.info h2, 
+.info p {
+  margin: 0px;
+}
+
+.spacer {
+  margin: 100px;
+}
+
+.spacer1 {
+  margin: 200px;
+}
+
+.spacer-timeline {
+  margin: 150px;
+}
+
+h4 {
+  text-align: center;
+  font-weight: 600;
+}
+
+
+/* Compétences */
+
+  .container-skills {
+    display: flex;
+    align-items: center; 
+    justify-content:center;
+    text-align: left;
+  }
+  
+  .container-skills:hover{
+    color:#ffcb21
+  }
+  
+  .etoiles {
+    flex: 0 0 auto; /* Les étoiles ne sont pas flexibles */
+    margin: 5px;
+  }
+  
+  .espace {
+    flex: 0 0 20px; /* Espace fixe entre les étoiles et le mot */
+  }
+  
+  .mot {
+    flex: 0.3; /* Le mot prendra tout l'espace restant */
+  }
+
+
+  /* Contact */ 
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact-map, 
+.contact-info {
+  width: 50%; 
+  padding: 10px;
+}
+
+.contact-map {
+  border-right: 3px solid #8E443DFF;
+}
+
+.contact-info {
+  padding-top: 120px;
+  border: 0;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding-left: 300px;
+  text-align: left;
+}
+
+.contact-info ul li {
+margin: 10px;
+}
+
+.tel-click,
+.mail-click {
+  color: #343E3D;
+}
+
+
+/* Barre de nav - bas de page */
 
 nav ul {
   list-style-type: none; 
@@ -117,211 +347,4 @@ height: 30px;
 .signature {
   color: white;
   text-align: center;
-}
-
-.container-apropos {
-  display: inline-flex;
-  align-items: center;
-}
-
-.image-apropos {
-  margin-right: 20px; /* Marge à droite de l'image pour l'espace */
-  padding-left: 150px;
-  padding-top: 50px;
-  max-width: 100%; /* Pour assurer la réactivité de l'image */
-  height: auto; /* Pour assurer la réactivité de l'image */
-}
-
-.texte-apropos {
-  flex: 0.7; /* Permet au texte descriptif de s'étendre autant que possible */
-  line-height: 2;
-}
-
-.bordeau-text {
-  color: #8E443DFF;
-  text-decoration: underline;
-  text-decoration-color: #8E443DFF;
-  font-weight: 600;
-}
-
-.titre-apropos {
-  background-color: #8E443DFF;
-  color: #ffffff;
-  padding-left: 15px; 
-  padding-right: 15px; 
-  display: inline-block; /* Permet d'ajuster la taille de la couleur de fond */
-
-}
-
-@media (max-width: 1400px) {
-  .container-apropos {
-    flex-direction: column; /* Alignement vertical des éléments */
-    align-items: center; /* Centrage horizontal des éléments */
-    text-align: center; /* Centrage du texte */
-  }
-
-  .image-apropos, .texte-apropos {
-    width: 100%; /* Les éléments prennent toute la largeur disponible */
-    padding: 0 20px; /* Ajout de marges latérales */
-    margin-bottom: 20px; /* Espace entre l'image et le texte */
-  }
-}
-
-.titre-rubrique1 {
-  background-color: #8E443DFF;
-  color: #ffffff;
-  text-align: center;
-  width: 11%; /* Largeur spécifique de l'arrière-plan */
-  height: 40px;
-  margin: 0 auto; /* Centrer l'arrière-plan horizontalement */
-  padding-top: 10px;
-  margin-bottom: 70px
-}
-.container-rubrique-experiences,
-.container-rubrique-etudes,
-.container-rubrique-competences,
-.container-rubrique-contact {
-  text-align: center;
-}
-
-.titre-rubrique {
-  background-color: #8E443DFF;
-  color: #ffffff;
-  text-align: center;
-  display: inline-block; /* Permet de centrer le contenu */
-  padding: 10px; /* Ajoutez des marges intérieures pour l'espace autour du texte */
-  box-sizing: border-box; /* Inclure les marges et les bordures dans la largeur fixe */
-  margin-bottom: 20px; /* Espacement en bas du titre */
-}
-
-
-/* Experiences et Éducations */
-
-.timeline {
-  position: relative;
-  width: 100%;
-  margin: 10px auto;
-}
-
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  background-color: #8E443DFF;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.entry {
-  display: flex;
-  justify-content:space-between;
-  margin-bottom: 20px;
-}
-
-.date {
-  width: 45%;
-  text-align: right;
-  padding-right: 20px;
-  box-sizing: border-box;
-  font-weight: 600;
-  margin-top: 8px;
-}
-
-.info {
-  width: 50%;
-  padding-left: 50px;
-  box-sizing: border-box;
-  text-align: left;
-}
-
-.info h2, .info p {
-  margin: 0px;
-}
-
-.spacer {
-  margin: 100px;
-}
-
-.spacer1 {
-  margin: 200px;
-}
-
-.spacer-timeline {
-  margin: 150px;
-}
-
-h4 {
-  text-align: center;
-  font-weight: 600;
-}
-/* Compétences */
-
-  .container-skills {
-    display: flex; /* Utilisation de Flexbox */
-    align-items: center; /* Centrer verticalement les éléments */
-    justify-content:center;
-    text-align: left;
-  }
-  
-  .container-skills:hover{
-    color:#ffcb21
-  }
-  
-  .etoiles {
-    flex: 0 0 auto; /* Les étoiles ne sont pas flexibles */
-    margin: 5px;
-  }
-  
-  .espace {
-    flex: 0 0 20px; /* Espace fixe entre les étoiles et le mot */
-  }
-  
-  .mot {
-    flex: 0.3; /* Le mot prendra tout l'espace restant */
-    /* Ajoutez d'autres styles selon vos besoins */
-  }
-  
-  h3 {
-    text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 15px;
-  }
-
-  /* Contact */ 
-.contact-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.contact-map, .contact-info {
-  width: 50%; /* Largeur de chaque bloc */
-  padding: 10px;
-}
-
-.contact-map {
-  border-right: 3px solid #8E443DFF;
-}
-
-.contact-info {
-  /* Style pour les blocs d'informations de contact et de formulaire */
-  padding-top: 120px;
-  border: 0;
-}
-
-.contact-info ul {
-  list-style-type: none;
-  padding-left: 50px;
-  text-align: left;
-}
-
-.contact-info ul li {
-margin: 10px;
-}
-
-.tel-click,
-.mail-click {
-  color: #343E3D;
 }
